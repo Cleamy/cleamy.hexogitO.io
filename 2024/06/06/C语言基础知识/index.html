@@ -1,0 +1,579 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>c语言程序设计1 | cleamy home</title><meta name="author" content="key cleamy"><meta name="copyright" content="key cleamy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="具体内容点击查看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c语言程序设计1">
+<meta property="og:url" content="https://starhexogithubo.starcondensed.top/2024/06/06/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:site_name" content="cleamy home">
+<meta property="og:description" content="具体内容点击查看">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/663639b70ea9cb14035a71b9.png">
+<meta property="article:published_time" content="2024-06-06T14:00:03.000Z">
+<meta property="article:modified_time" content="2024-06-06T14:07:56.062Z">
+<meta property="article:author" content="key cleamy">
+<meta property="article:tag" content="专插本">
+<meta property="article:tag" content="c语言程序设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/663639b70ea9cb14035a71b9.png"><link rel="shortcut icon" href="/img/cleamy.jpg"><link rel="canonical" href="https://starhexogithubo.starcondensed.top/2024/06/06/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'c语言程序设计1',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-06 22:07:56'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><link rel="stylesheet" href="https://www.fomal.cc/static/css/runtime.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cleamy.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">10</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw icon-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw icon-guidang"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw icon-guidang"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw icon-fenlei"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw icon-liebiao"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw icon-yinle"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw icon-kandianying"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw icon-xin"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw icon-lianjie"></i><span> 友连</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw icon-guanyuwomen"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.imgdb.cn/item/663639b70ea9cb14035a71b9.png')"><nav id="nav"><span id="blog-info"><a href="/" title="cleamy home"><span class="site-name">cleamy home</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw icon-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw icon-guidang"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw icon-guidang"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw icon-fenlei"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw icon-liebiao"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw icon-yinle"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw icon-kandianying"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw icon-xin"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw icon-lianjie"></i><span> 友连</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw icon-guanyuwomen"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">c语言程序设计1</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-06-06T14:00:03.000Z" title="Created 2024-06-06 22:00:03">2024-06-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-06-06T14:07:56.062Z" title="Updated 2024-06-06 22:07:56">2024-06-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%93%E6%8F%92%E6%9C%AC/">专插本</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%93%E6%8F%92%E6%9C%AC/c%E8%AF%AD%E8%A8%80/">c语言</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">2.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>8mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="c语言程序设计1"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="专插本c语言知识点"><a href="#专插本c语言知识点" class="headerlink" title="专插本c语言知识点"></a>专插本c语言知识点</h1><h2 id="C语言基础"><a href="#C语言基础" class="headerlink" title="C语言基础"></a>C语言基础</h2><h3 id="数据形式"><a href="#数据形式" class="headerlink" title="数据形式"></a>数据形式</h3><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/assets/image-20240606165820043.png" alt="avatar"></p>
+<h5 id="整型类型"><a href="#整型类型" class="headerlink" title="整型类型"></a>整型类型</h5><ul>
+<li>基本整型（int)</li>
+<li>短整型（short int）</li>
+<li>长整型（long int）</li>
+<li>双长整型（long long int）</li>
+<li>字符型（char）</li>
+<li>布尔类型（boolean）</li>
+</ul>
+<p>计算机编译原理</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/assets/image-20240606170450836.png" alt="avatar"></p>
+<h6 id="基本整型"><a href="#基本整型" class="headerlink" title="基本整型"></a>基本整型</h6><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 变量定义方式</span></span><br><span class="line">	<span class="comment">// 数据类型  变量名;	</span></span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="comment">// 已十进制输入变量a</span></span><br><span class="line">    print(<span class="string">&quot;变量：%d&quot;</span>,a);</span><br><span class="line">    <span class="comment">// 取出变量的地址</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%x&quot;</span>,&amp;a);</span><br><span class="line">	<span class="comment">// 已16进制的方式输出地址</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%p&quot;</span>,&amp;a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>一个英文字母占用一个字节</li>
+<li>一个中文字母占用两个字节</li>
+<li>short int 的 范围: -32768~32767</li>
+<li>short int 两个字节 </li>
+<li>一个字节 8 位</li>
+</ul>
+<h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><p>​    常量和变量的区别：变量是“可读取，可写入 ”而常量是“只可读取”</p>
+<p>​    常量定义有两种和方式：一种是宏定义的，称为符号 常量，符号常量操作系统不会给它开辟空间，因此常量是不可以自增</p>
+<p>​    另一种是常变量</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="number">3.14e3</span> = <span class="number">3.14</span>*<span class="number">10</span>^<span class="number">3</span>;</span><br><span class="line"><span class="number">3.14e-3</span> = <span class="number">3.14</span>*<span class="number">10</span>^<span class="number">-3</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>①整型常量，例如  100， 0 ， -9</li>
+<li>②实际常量有两种，<ul>
+<li>十进制小数：12.0，-8.0</li>
+<li>指数形式：数字+E/e +数字<ul>
+<li>e 或者 E 前面必须有数;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>③字符常量有两种<ul>
+<li>字符常量：’2’,’\0’,’A’<ul>
+<li>字符常量只能 只用单引号，</li>
+<li>字符常量可与ASCII码表对照</li>
+<li>0 -&gt; 48 </li>
+<li>a -&gt; 97</li>
+<li>A-&gt; 6</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>④转义字符 \</li>
+<li>⑤符号常量</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.15</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> a = PI*<span class="number">10</span>;</span><br><span class="line">	<span class="type">char</span> c = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">    <span class="comment">// 输出 ’ 字符</span></span><br><span class="line">    <span class="type">char</span> b = <span class="string">&#x27;\&#x27;&#x27;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="c语言的产生（高级语言）"><a href="#c语言的产生（高级语言）" class="headerlink" title="c语言的产生（高级语言）"></a>c语言的产生（高级语言）</h3><p>​    1972年~1973年在，美国的贝尔实验室，由Denis.M.Ritchie创建。</p>
+<p>​    C语言的产生基于两个方面。</p>
+<p>​            一是为满足UNIX操作系统开发的需要</p>
+<p>​            二是为拉近高级语言雨硬件之间距离的需要</p>
+<p>UNIX     1.0     汇编语言</p>
+<p>​               2.0     BCPL（B语言）</p>
+<p>​               3.0     C语言</p>
+<h3 id="c语言的特点（倒序）"><a href="#c语言的特点（倒序）" class="headerlink" title="c语言的特点（倒序）"></a>c语言的特点（倒序）</h3><ul>
+<li>（1）c语言简洁、紧凑，压缩了一切不必要的成分</li>
+<li>（2）C语言运算丰富，将括号、赋值、强制类型转化、取变量地址</li>
+<li>（3）C语言<font color="red">数据类型丰富</font>，具有现代语言的各种数据类型；用户能扩充数据类型，能够思想各种复杂的数据结构，，完成各种问题的数据<ul>
+<li>基本数据类型<ul>
+<li>char</li>
+<li>int</li>
+<li>float</li>
+<li>double</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>（4）C语言是一种<font color="red">结构化程序设计语言</font>，具有结构化语言产生要求的三种基本结构</li>
+<li>（5）C语言是高级语言中的低级语言，c语言运行字节<font color="red">访问物理内存地址</font>。能够进行为运算，思想汇编预压的绝大部分功能，预先字节对硬件进行操作</li>
+<li>（6）C语言提供<font color="red">编译预处理处理机制</font>，有利于大年程序的编写和调试</li>
+<li>（7）c语言编译系统小，生成的代码质量高，程序的<font color="red">执行效率高</font></li>
+<li>（8）C语言的<font color="red">输入和输出功能使用函数</font>思想，编写的程序<font color="red">移植性好</font></li>
+<li>（9）C语言语法限制不太严格，程序设计只有度大，对程序源要求较高<ul>
+<li>计算机语言：<ul>
+<li>1、机器语言</li>
+<li>2、汇编语言</li>
+<li>3、高级语言</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="程序设计语言"><a href="#程序设计语言" class="headerlink" title="程序设计语言"></a>程序设计语言</h3><p>(一) 程序语言 基础</p>
+<p>​    算犯法和数据结构是程序 最主要的两个方面：</p>
+<p>​    程序=算法+数据结构</p>
+<p>​    <font color="red">算法</font>可以看作是<font color="red">有限哥步骤组成的用来解决问题的具体过程</font></p>
+<p>​    三种结构：<font color='red'>顺序结构、选择结构和循环结构</font></p>
+<p>​    数据结构是从问题中抽象出来的数据之间的关系，它代表信息的一种组织方式、</p>
+<p>​    2. 程序设计语言</p>
+<p>​    计算机语言是程序设计的最重要的工具，它是指计算机能够接受和处理的且具有一定格式的语言</p>
+<p>​    计算机语言：机器语言、汇编语言、高级语言</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1、计算机语言分为：机器语言，汇编语言，高级语言</span><br><span class="line">2、机器语言和汇编语言被称为低级语言</span><br><span class="line">3、能够被计算机字节执行的语言是机器语言</span><br><span class="line">4、c语言是高级语言，不能被直接执行，需要进行编译</span><br><span class="line">5、c语言编译过程</span><br><span class="line"></span><br><span class="line">——编辑 ——&gt; 源程序（.c 文本文件）——&gt; 编译——&gt; 目标文件（.obj二进制文件）——&gt;链接 ——&gt; 可执行文件（.exe二进制文件）</span><br><span class="line"></span><br><span class="line">其中源程序，目标文件不饿能被计算机直接执行，只有可执行给文件能够被直接执行</span><br></pre></td></tr></table></figure>
+<h2 id="c程序的结构和语法成分"><a href="#c程序的结构和语法成分" class="headerlink" title="c程序的结构和语法成分"></a>c程序的结构和语法成分</h2><h3 id="一、c程序的结构"><a href="#一、c程序的结构" class="headerlink" title="一、c程序的结构"></a>一、c程序的结构</h3><h4 id="（1、）函数（function）"><a href="#（1、）函数（function）" class="headerlink" title="（1、）函数（function）"></a>（1、）函数（function）</h4><ol>
+<li>C语言的结构</li>
+<li>C语言的程序由诺干<font color='#ED8A4F'>函数</font>组成，<font color='#ED8A4F'>函数</font>是C程序的<font color='#ED8A4F'>基本单位</font><ol>
+<li><font color='#ED8A4F'>必须有且只能有一个主函数main()，主函数的名字为main,主函数是一个程序的入口，也是一个程序的出口</font>※※※</li>
+<li>可以是<font color='#ED8A4F'>系统预定义的标准函数</font>，入scanf函数，printf函数等</li>
+<li>大多数函数由程序员根据实际问题的需要进行定义，函数之间的<font color='#ED8A4F'>平行关系</font>，基于此，<font color='#ED8A4F'>c语言被称为函数式语言</font></li>
+</ol>
+</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="comment">// 行注释 //</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	块注释</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span> &#123;<span class="comment">// 主函数（主函数有且仅有一个）、函数头</span></span><br><span class="line">    <span class="comment">// 函数体</span></span><br><span class="line">    <span class="type">int</span> a, b, sum;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">    sum = a + b;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sum);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 自定义函数</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span> <span class="params">(<span class="type">int</span> m, <span class="type">int</span> n )</span> &#123;</span><br><span class="line">  <span class="comment">// 函数体  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="C语言的结构"><a href="#C语言的结构" class="headerlink" title="C语言的结构"></a>C语言的结构</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span>  <span class="comment">// ①</span></span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">&lt;&gt; : 在系统环境中进行查找头文件</span></span><br><span class="line"><span class="comment">&quot;&quot; : 在当前项目中进行查找头文件</span></span><br><span class="line"><span class="comment">stdio.h : 代表 基本输入输出头文件 可以使用scanff printf 等IO库</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123; <span class="comment">// ② 主函数的 函数头</span></span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> a,b; <span class="comment">// ③ 定义整型变量 a b</span></span><br><span class="line">    <span class="type">int</span> sum; <span class="comment">// 定义整型变量 sum</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入两个整数a,b&quot;</span>); <span class="comment">// 输出字符</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d,%d&quot;</span>,&amp;a,&amp;b); <span class="comment">// 输入 a + b 的值 </span></span><br><span class="line">    sum=a+b; <span class="comment">// 将a 和 b 的 值 赋值给 sum</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;和=%d\n&quot;</span>,sum); <span class="comment">// 打印</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输入数据：1999.55</span></span><br><span class="line"><span class="comment">// 运行结果：和=2004</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-函数的构成"><a href="#2-函数的构成" class="headerlink" title="2. 函数的构成"></a>2. 函数的构成</h5><p>​    函数由 函数头（函数的说明部分）与函数体（函数的语句部分）两部分组成</p>
+<p>​    （1）函数头给出函数的特征描述，包括函数的属性，类型、名字、参数以及参数的类型</p>
+<p>​    （2）函数体给出函数功能思想的数据描述（声明部分）和操作描述（执行部分）</p>
+<h4 id="（二）语句"><a href="#（二）语句" class="headerlink" title="（二）语句"></a>（二）语句</h4><ol>
+<li>语句是组成程序的最小单位，函数功能的实现由诺干条语句完成</li>
+<li>语句由诺干关键字加以标识，如if-else语句、do-while语句</li>
+<li>c语言本身没有输入/输出语句，c语言的输入/输出操作由scanf函数和printff函数等函数库完成</li>
+<li>c语言语句必须以分号结束</li>
+<li>只有分号构成的语句的语句叫空语句</li>
+</ol>
+<h4 id="（三）其他"><a href="#（三）其他" class="headerlink" title="（三）其他"></a>（三）其他</h4><ol>
+<li>预处理命令<ol>
+<li>c程序开始往往由 # 开头的命令，它们是预处理指令，如：include “stdio.h” 用以指明包含的文件</li>
+</ol>
+</li>
+<li>程序的注释<ol>
+<li>多行注释（块注释）：/**/</li>
+<li>单行注释 ：//</li>
+</ol>
+</li>
+<li>c程序的书写<ol>
+<li>一行一般写一条语句。也可以一行 写多条语句</li>
+<li>整个程序采用紧缩格式书写。标识同一层次的语句行对齐</li>
+<li>在程序总中恰当地使用空行，分隔程序中的语句块，增加程序的可读性</li>
+</ol>
+</li>
+</ol>
+<h3 id="二、基本语法成份-（标识符的命名）"><a href="#二、基本语法成份-（标识符的命名）" class="headerlink" title="二、基本语法成份 （标识符的命名）"></a>二、基本语法成份 （标识符的命名）</h3><h4 id="（一）-字符集"><a href="#（一）-字符集" class="headerlink" title="（一） 字符集"></a>（一） 字符集</h4><p>​    字符是可以区分的最小和符号，构成程序的原始基础</p>
+<p>​    c语言字符集是ASCII字符值</p>
+<h4 id="（二）标识符"><a href="#（二）标识符" class="headerlink" title="（二）标识符"></a>（二）标识符</h4><p>​    标识符在程序中用来标识各种程序成份。</p>
+<p>​    命名程序中的一些实体，如变量、常量、函数、类型、标识等对象的名字</p>
+<p>​    c语言规定，标识符，必须以英文字母或下划线开头，是字母、数字、下划线的序列</p>
+<ol>
+<li>标识符<ol>
+<li>关键字（小写构成）</li>
+<li>标准标识符（编译系统中已经存在的scanf等标识符）</li>
+<li>自定义标识符（自定义的函数名、变量名）</li>
+</ol>
+</li>
+<li>命名规则<ol>
+<li>只能由  数字、字母、下划线 构成</li>
+<li>数字 不能开头</li>
+<li>严格区分大小写</li>
+<li>关键字不能使用（用户自定义标识符）</li>
+</ol>
+</li>
+</ol>
+<h4 id="（三）关键字"><a href="#（三）关键字" class="headerlink" title="（三）关键字"></a>（三）关键字</h4><p>​    关键字又称为保留字，由系统提供，用以标识特定的语法成份，如类型名称int float 语句特征 if switch while 运算符号sizeof等，是构成c语言的语法基础</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>关键字</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char(字符型)</td>
+<td>int(整型)</td>
+<td>float(单精度浮点型)</td>
+<td>double(双精度浮点型)</td>
+<td>void(空类型)</td>
+</tr>
+<tr>
+<td>long(长)</td>
+<td>short(短)</td>
+<td>signed(由符号型)</td>
+<td>unsigned(无符号型)</td>
+<td>if(如果)</td>
+</tr>
+<tr>
+<td>else(否则)</td>
+<td>switch(开关)</td>
+<td>case(案例)</td>
+<td>default(默认)</td>
+<td>while(循环)</td>
+</tr>
+<tr>
+<td>for(循环)</td>
+<td>break(跳出)</td>
+<td>continue(继续)</td>
+<td>goto(跳转)</td>
+<td>return(返回)</td>
+</tr>
+<tr>
+<td>sizeof(求字节大小)</td>
+<td>const(常量)</td>
+<td>volatile（）</td>
+<td>struct(结构体)</td>
+<td>enum(枚举)</td>
+</tr>
+<tr>
+<td>typeof(起别名)</td>
+<td>auto(自动)</td>
+<td>static(静态)</td>
+<td>extern(外部)</td>
+<td>register(寄存器)</td>
+</tr>
+<tr>
+<td>do(循环搭配)</td>
+<td>union(共用体)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>​    </p>
+<h4 id="（四）运算符"><a href="#（四）运算符" class="headerlink" title="（四）运算符"></a>（四）运算符</h4><p>​    运算丰富实际上可以认为是系统定义的函数名字，这些函数的作用用于运算对象</p>
+<p>​    +、-、&amp;、&gt;、sizeof字节数运算符号…..</p>
+<p>根据运算对象的个数不同，分为</p>
+<ol>
+<li>单目运行符<ol>
+<li>!a ——&gt; ！为运算符 ，a 为 操作数</li>
+</ol>
+</li>
+<li>双目运算符<ol>
+<li>a+b 双目</li>
+</ol>
+</li>
+<li>三目运算符<ol>
+<li>_<em>?__:\</em> —-&gt; 10+b&gt;10?5:5</li>
+</ol>
+</li>
+</ol>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1、c语言程序由诺干个函数组成，函数是c程序的基本单位</span><br><span class="line">2、必须由一个且只能有一个主函数main(),主函数是一个程序入口，也是一个程序的出口</span><br><span class="line">3、语句是组成程序的最小单位</span><br><span class="line">4、标识符命名规则</span><br><span class="line">	（1）只能由数字、字母、下划线组成</span><br><span class="line">	（2）不饿以数字开头</span><br><span class="line">	（3）严格区分大小写</span><br><span class="line">	（4）不能以关键字命名</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://starhexogithubo.starcondensed.top">key cleamy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://starhexogithubo.starcondensed.top/2024/06/06/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">https://starhexogithubo.starcondensed.top/2024/06/06/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%B8%93%E6%8F%92%E6%9C%AC/">专插本</a><a class="post-meta__tags" href="/tags/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">c语言程序设计</a></div><div class="post_share"><div class="social-share" data-image="https://pic.imgdb.cn/item/663639b70ea9cb14035a71b9.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/05/06/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%B2%E4%B9%89/" title="别人的软件设计师资料2"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/663639c60ea9cb14035aa6e3.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">别人的软件设计师资料2</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/cleamy.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">key cleamy</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>key cleamy</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Cleamy/cleamy.hexogitO.io" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/keycleamy@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is cleamy's home</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%93%E6%8F%92%E6%9C%ACc%E8%AF%AD%E8%A8%80%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">专插本c语言知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80"><span class="toc-text">C语言基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BD%A2%E5%BC%8F"><span class="toc-text">数据形式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B4%E5%9E%8B%E7%B1%BB%E5%9E%8B"><span class="toc-text">整型类型</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B4%E5%9E%8B"><span class="toc-text">基本整型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-text">常量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c%E8%AF%AD%E8%A8%80%E7%9A%84%E4%BA%A7%E7%94%9F%EF%BC%88%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%EF%BC%89"><span class="toc-text">c语言的产生（高级语言）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c%E8%AF%AD%E8%A8%80%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%88%E5%80%92%E5%BA%8F%EF%BC%89"><span class="toc-text">c语言的特点（倒序）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80"><span class="toc-text">程序设计语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#c%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E5%92%8C%E8%AF%AD%E6%B3%95%E6%88%90%E5%88%86"><span class="toc-text">c程序的结构和语法成分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81c%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-text">一、c程序的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%E3%80%81%EF%BC%89%E5%87%BD%E6%95%B0%EF%BC%88function%EF%BC%89"><span class="toc-text">（1、）函数（function）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-text">C语言的结构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%84%E6%88%90"><span class="toc-text">2. 函数的构成</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E8%AF%AD%E5%8F%A5"><span class="toc-text">（二）语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%85%B6%E4%BB%96"><span class="toc-text">（三）其他</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%88%90%E4%BB%BD-%EF%BC%88%E6%A0%87%E8%AF%86%E7%AC%A6%E7%9A%84%E5%91%BD%E5%90%8D%EF%BC%89"><span class="toc-text">二、基本语法成份 （标识符的命名）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89-%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-text">（一） 字符集</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-text">（二）标识符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">（三）关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">（四）运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By key cleamy</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Toggle Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>(() => {
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikvercel.starcondensed.top/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikvercel.starcondensed.top/',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.31/dist/twikoo.all.min.js').then(init)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script defer src="/js/light.js"></script><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script async src="//at.alicdn.com/t/c/font_4532916_qfp46anssib.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="false" data-text="java,c++,c#,python," data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://starhexogithubo.starcondensed.top/categories/java/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 java相关内容 (4)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://starhexogithubo.starcondensed.top/categories/c/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 c相关内容 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://starhexogithubo.starcondensed.top/categories/python/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐱‍👓 python相关内容 (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://starhexogithubo.starcondensed.top/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #b30070}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm1.webp);"> <a class="categoryBar-list-link" href="categories/java/">java</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">世间如何美好为何不点击看看</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm2.webp);"> <a class="categoryBar-list-link" href="categories/专插本/">专插本</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">随便逛逛说不定可以发现新颖</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm4.webp);"> <a class="categoryBar-list-link" href="categories/python/">python</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">别看简单,越简单越难精通</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm3.webp);"> <a class="categoryBar-list-link" href="categories/java/proxy/">proxy</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">美好的色彩需要每个小颗粒</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm2.webp);"> <a class="categoryBar-list-link" href="categories/java/spring/">spring</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">一个人可以是一个团队</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm2.webp);"> <a class="categoryBar-list-link" href="categories/专插本/c语言/">c语言</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">日日夜夜都在期盼某一个瞬间</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm1.webp);"> <a class="categoryBar-list-link" href="categories/java/AOP/">AOP</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">世间如何美好为何不点击看看</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm2.webp);"> <a class="categoryBar-list-link" href="categories/python/selenium/">selenium</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">随便逛逛说不定可以发现新颖</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm4.webp);"> <a class="categoryBar-list-link" href="categories/c/">c</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">别看简单,越简单越难精通</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm3.webp);"> <a class="categoryBar-list-link" href="categories/软件设计师/">软件设计师</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">美好的色彩需要每个小颗粒</span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var qweather_key = 'ac66b3f48124459684a6524460e97e2e';
+  var gaud_map_key = '1d7688d9fa4bb2636d8c60d28706beb0';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '113.34532,23.15624';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v6.2.0" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.3.1" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" data-title="本站采用多线部署，主线路托管于Vercel" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://dashboard.4everland.org/" style="margin-inline:5px" data-title="本站采用多线部署，备用线路托管于4EVERLAND" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-4EVERLAND-22DDDD?style=flat&amp;logo=IPFS" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="/js/runtime.js"></script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/05/02/ssm/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/663639b60ea9cb14035a6e8e.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-05-02</span><a class="blog-slider__title" href="2024/05/02/ssm/" alt="">关于ssm框架学习</a><div class="blog-slider__text">具体内容点击查看</div><a class="blog-slider__button" href="2024/05/02/ssm/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/05/02/springAOP思想/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/663639b90ea9cb14035a7946.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-05-02</span><a class="blog-slider__title" href="2024/05/02/springAOP思想/" alt="">springAOP思想</a><div class="blog-slider__text">具体内容点击查看</div><a class="blog-slider__button" href="2024/05/02/springAOP思想/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/05/02/selenium-自动化测试/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/663639c70ea9cb14035aaa60.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-05-02</span><a class="blog-slider__title" href="2024/05/02/selenium-自动化测试/" alt="">自动化测试</a><div class="blog-slider__text">具体内容点击查看</div><a class="blog-slider__button" href="2024/05/02/selenium-自动化测试/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/05/02/logging—日志处理/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/663639c60ea9cb14035aa6e3.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-05-02</span><a class="blog-slider__title" href="2024/05/02/logging—日志处理/" alt="">python[Logging 内置函数]</a><div class="blog-slider__text">具体内容点击查看</div><a class="blog-slider__button" href="2024/05/02/logging—日志处理/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/05/02/java动态代理/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/663639b90ea9cb14035a7946.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-05-02</span><a class="blog-slider__title" href="2024/05/02/java动态代理/" alt="">java动态代理</a><div class="blog-slider__text">具体内容点击查看</div><a class="blog-slider__button" href="2024/05/02/java动态代理/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/05/06/软考-软件设计师-笔记/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/663639b50ea9cb14035a6afc.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-05-06</span><a class="blog-slider__title" href="2024/05/06/软考-软件设计师-笔记/" alt="">别人的软件设计师资料</a><div class="blog-slider__text">具体内容点击查看</div><a class="blog-slider__button" href="2024/05/06/软考-软件设计师-笔记/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/05/06/软件设计师讲义/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/663639c60ea9cb14035aa6e3.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-05-06</span><a class="blog-slider__title" href="2024/05/06/软件设计师讲义/" alt="">别人的软件设计师资料2</a><div class="blog-slider__text">具体内容点击查看</div><a class="blog-slider__button" href="2024/05/06/软件设计师讲义/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/05/02/数据结构/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/663639c70ea9cb14035aaa60.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-05-02</span><a class="blog-slider__title" href="2024/05/02/数据结构/" alt="">数据结构</a><div class="blog-slider__text">具体内容点击查看</div><a class="blog-slider__button" href="2024/05/02/数据结构/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/06/06/C语言基础知识/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/663639b70ea9cb14035a71b9.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-06-06</span><a class="blog-slider__title" href="2024/06/06/C语言基础知识/" alt="">c语言程序设计1</a><div class="blog-slider__text">具体内容点击查看</div><a class="blog-slider__button" href="2024/06/06/C语言基础知识/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__heartBeat');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '1s');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '2');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__heartBeat');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('gitZone');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('gitZone') && (location.pathname ==='/about/'|| '/about/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gitcalendar.fomal.cc/api?cleamy",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'cleamy')
+    }
+  </script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body></html>
