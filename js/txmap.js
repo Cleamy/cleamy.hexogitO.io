@@ -29,10 +29,12 @@ function getDistance(e1, n1, e2, n2) {
 
 function showWelcome() {
 
-    let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+    let dist = getDistance(120.21, 30.25, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
     let pos = ipLoacation.result.ad_info.nation;
     let ip;
     let posdesc;
+    console.log(ipLoacation.result.ad_info.nation)
+    console.log(ipLoacation.result.ad_info.province)
     //根据国家、省份、城市信息自定义欢迎语
     switch (ipLoacation.result.ad_info.nation) {
         case "日本":
@@ -147,6 +149,7 @@ function showWelcome() {
                     posdesc = "74751，长沙斯塔克。";
                     break;
                 case "广东省":
+                    console.log("广东呀")
                     posdesc = "老板来两斤福建人。";
                     break;
                 case "广西壮族自治区":
@@ -215,8 +218,9 @@ function showWelcome() {
     try {
         //自定义文本和需要放的位置
         document.getElementById("welcome-info").innerHTML =
-            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
-    } catch (err) {
+            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，
+           `;
+    } catch (err) { // 当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>
         // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
     }
 }
