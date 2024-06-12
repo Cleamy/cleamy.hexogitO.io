@@ -33,8 +33,8 @@ function showWelcome() {
     let pos = ipLoacation.result.ad_info.nation;
     let ip;
     let posdesc;
-    print(ipLoacation.result.ad_info.nation)
-    print(ipLoacation.result.ad_info.province)
+    // print(ipLoacation.result.ad_info.nation)
+    // print(ipLoacation.result.ad_info.province)
     //根据国家、省份、城市信息自定义欢迎语
     switch (ipLoacation.result.ad_info.nation) {
         case "日本":
