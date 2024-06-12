@@ -33,8 +33,8 @@ function showWelcome() {
     let pos = ipLoacation.result.ad_info.nation;
     let ip;
     let posdesc;
-    console.log(ipLoacation.result.ad_info.nation)
-    console.log(ipLoacation.result.ad_info.province)
+    print(ipLoacation.result.ad_info.nation)
+    print(ipLoacation.result.ad_info.province)
     //根据国家、省份、城市信息自定义欢迎语
     switch (ipLoacation.result.ad_info.nation) {
         case "日本":
@@ -149,7 +149,7 @@ function showWelcome() {
                     posdesc = "74751，长沙斯塔克。";
                     break;
                 case "广东省":
-                    console.log("广东呀")
+                    // console.log("广东呀")
                     posdesc = "老板来两斤福建人。";
                     break;
                 case "广西壮族自治区":
