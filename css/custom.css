@@ -24,11 +24,13 @@
   }
 
   /* 小冰分类分类磁铁黑夜模式适配 */
+
 /* 一般状态 */
 [data-theme="dark"] .magnet_link_context {
   background: #1e1e1e;
   color: antiquewhite;
 }
+
 /* 鼠标悬浮状态 */
 [data-theme="dark"] .magnet_link_context:hover {
   background: #3ecdf1;
@@ -290,9 +292,11 @@ svg.social_icon {
 #rightMenu .rightMenu-group {
   padding: 7px 6px;
 }
+
 #rightMenu .rightMenu-group:not(:nth-last-child(1)) {
   border-bottom: 1px solid var(--font-color);
 }
+
 #rightMenu .rightMenu-group.rightMenu-small {
   display: flex;
   justify-content: space-between;
@@ -351,6 +355,7 @@ svg.social_icon {
   background-attachment: inherit;
   background-size: 100%;
 }
+
 [data-theme="dark"] #aside-content > .card-widget.card-info {
   background-image: url(https://sourcebucket.s3.ladydaily.com/img/aurora.webp);
   background-repeat: no-repeat;
