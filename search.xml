@@ -5,45 +5,6 @@
     
     <entry>
       <title></title>
-      <link href="/2024/06/17/cprograme-4-%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/"/>
-      <url>/2024/06/17/cprograme-4-%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/</url>
-      
-        <content type="html"><![CDATA[<h1 id="C语言插本自学篇"><a href="#C语言插本自学篇" class="headerlink" title="C语言插本自学篇"></a>C语言插本自学篇</h1><p>&gt;</p><blockquote><p>🚀<a href="../插本c语言知识点.md">1. C 语言知识基础知识</a>🚀</p><p>🚀<a href="../计算机的存储.md">2. 计算机的存储结构</a>🚀</p><p>🚀<a href="./3.C语言的数据类型.md">2. 计算机的存储结构</a>🚀</p></blockquote><h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><h2 id="一-常量"><a href="#一-常量" class="headerlink" title="一 常量"></a>一 常量</h2><p>（1）常量的定义</p><p><font color="red">常量是在程序运算过程中不变的量</font><br>常量在程序中经常直接出现：123、3.1415926，’a’, ‘computer’<br>它们符合相应类型的表示方法<br>相应的各种数据类型：如：整型常量，浮点型常量，字符型常量，字符串型常量</p><h3 id="1-整型常量（整常量）"><a href="#1-整型常量（整常量）" class="headerlink" title="1. 整型常量（整常量）"></a>1. 整型常量（整常量）</h3><p>（1）十进制整数：有数字0~9和正负号表示，如：124、-12、0<br>（2）八进制整数：有数字0开头，后跟着数字0~7表示，如0123、011<br>（3）十六进制整数：有0x开头，后跟着0~9、a~f、A~F表示，如0x123、0xff<br>根据 其值在范围内确定其数据类型。在整型常量后加字母l或L，认为它是long，<br>int 型常量<br>例如：<br>0123=（83）10<br>0x123=（291）10<br>0xff=（255）10</p><h3 id="2-实型常量（实数或浮点数）"><a href="#2-实型常量（实数或浮点数）" class="headerlink" title="2. 实型常量（实数或浮点数）"></a>2. 实型常量（实数或浮点数）</h3><p>（1）十进制数形式<br>（2）指数形式：（e前后都有数，e后是整数），如12.3e3<br>例如：123E2(√)，1.23e5(√)，e3(×).1.2E-2.5(×)<br>实行常量的类型默认是double型，如何实型常量后加f/f则表示float型<br>注意：实行常量智能用十进制表示，不能使用八进制或 十六进制表示<br>合法的实型常量：29.56，34.123，2.3e+8<br>不合法的实行常量：5.4E+3.8，e5，e-1</p><h3 id="3-字符常量"><a href="#3-字符常量" class="headerlink" title="3.字符常量"></a>3.字符常量</h3><p>定义：用单引号括起来的单个普通字符或转义字符<br>字符常量的值：该赐福的ascII码值<br>转义字符：反斜杠后跟着一个字符或一个代码值<br><img src="/img/cpimg/常见的ascii码值.png" alt=""></p><p>转义字符及其含义：<br><img src="/img/cpimg/转义字符表.png" alt=""></p><h3 id="4-字符串常量"><a href="#4-字符串常量" class="headerlink" title="4.字符串常量"></a>4.字符串常量</h3><p>字符串常量的特点是有一对双引号定界，双引号是定界符，<br>不属于常量的内容，双引号必须为英文且不分左右；<br>并由0或诺干字符组成，字符串可以包含空格，如“abedefgh””10+20”、””等，<br>字符串还可包含转义字符<br>与两个单引号内必须由一个一个字符不同，两个双引号内可以没有内容，两个连续的双引号表示0个字符串，称为空串<br>关于存储：每个字符床尾自动加一个\0作为字符串结束的标志</p><script type="math/tex; mode=display">    sieof(存储的大小) = 字符个数+1('\0')    strlen(存储长度) = 字符个数('不含\0')</script><p>例题<br><img src="/img/cpimg/常量例题1.png" alt=""></p><h3 id="5-符号定义"><a href="#5-符号定义" class="headerlink" title="5. 符号定义"></a>5. 符号定义</h3><p>（1）符号常量<br>用#define宏定义，指定用一个符号名称代表一个常量<br>如：#define PI 3.14 // 没有分号</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2024/06/17/cprograme-3-c%E8%AF%AD%E8%A8%80%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-      <url>/2024/06/17/cprograme-3-c%E8%AF%AD%E8%A8%80%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-      
-        <content type="html"><![CDATA[<blockquote><h1 id="C语言插本自学篇"><a href="#C语言插本自学篇" class="headerlink" title="C语言插本自学篇"></a>C语言插本自学篇</h1><p>🚀<a href="../插本c语言知识点.md">1. C 语言知识基础知识</a>🚀</p><p>🚀<a href="../计算机的存储.md">2. 计算机的存储结构</a>🚀</p><p>🚀<a href="./3.C语言的数据类型.md">2. 计算机的存储结构</a>🚀</p></blockquote><h1 id="C语言的数据类型"><a href="#C语言的数据类型" class="headerlink" title="C语言的数据类型"></a>C语言的数据类型</h1><h2 id="一、数据类型"><a href="#一、数据类型" class="headerlink" title="一、数据类型"></a>一、数据类型</h2><p><img src="/img/cpimg/数据类型.png" alt=""></p><h3 id="（1）基本数据类型"><a href="#（1）基本数据类型" class="headerlink" title="（1）基本数据类型"></a>（1）基本数据类型</h3><font color="block">基本数据类</font>：基本数据类型最主要的特点是其值不可以再分解为其他类型包括<font color="block">整型（int）、实型-浮点型（单精度（float）、双精度（double）、字符型（char）</font><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a；</span><br><span class="line"><span class="type">float</span> a；</span><br></pre></td></tr></table></figure><h3 id="（二）构造数据类型"><a href="#（二）构造数据类型" class="headerlink" title="（二）构造数据类型"></a>（二）构造数据类型</h3><font color="bloack">构造数据类型</font>：构造数据类型是根据已定义的一个或多个数据类型用构造的方法来定义的，也就是说，一个构造类型的值可以分解成诺干个“成员”或“元素”。每个“成员”都是一个基本数据类型 或 又是一个构造类型。包括<font color="bloack">数组类型（[]）、结构体类型（struct）、公用体类型（union）</font><h3 id="三-指针类型（-）"><a href="#三-指针类型（-）" class="headerlink" title="(三) 指针类型（*）"></a>(三) 指针类型（*）</h3><p><font color="block">指针类型（*）</font>：指针是一种特殊的，同时又具有重要作用的 数据类型。其值用来表示某报个变量再内存储器中的地址，虽然指针变量的取值乐视于整型量，但是两种类型完全不相同的量</p><h3 id="四-空类型-（void）"><a href="#四-空类型-（void）" class="headerlink" title="(四) 空类型 （void）"></a>(四) 空类型 （void）</h3><p>空类型：在盗用函数值是，通常应向调用者后返回一个函数值，这个函数值是据一定的数据类型，应在函数定义以及函数说明中加以说明，如果 int max (int a,int b) ;其中 int 类型 说明符比爱哦是改函数的返回值 为整型量，但是也有以内函数，调用后不需要向调用者返回函数值，这种函数可以定义为“空类型”</p><h2 id="二、常用的基本数据类型"><a href="#二、常用的基本数据类型" class="headerlink" title="二、常用的基本数据类型"></a>二、常用的基本数据类型</h2><p> <img src="/img/cpimg/数据类型表.png" alt=""></p><p>计算机内部，数据是以二进制的形式存储和运算的，计算机类表示的数分成整数和实数两大类。数的正负用最好字节的最高位来表示，定义为符号位，用“0”比爱哦是正数，“1”表示负数。</p><p>列入，二进制数+1101000 在及其类的 表示为：</p><p><img src="/img/cpimg/c语言中的二进制.png" alt=""></p><h3 id="数"><a href="#数" class="headerlink" title="数"></a>数</h3><ol><li>有符号数：符号位（最高位） + 数值位 （需要补码）<ol><li>0 为正数</li><li>1为负数</li><li>00000001  +1</li><li>10000001  -1</li></ol></li><li>无符号数：数值位<ol><li>全为数值位</li><li>00000001  +1</li><li>10000001  +129</li></ol></li></ol><h3 id="原码、反码、补码"><a href="#原码、反码、补码" class="headerlink" title="原码、反码、补码"></a>原码、反码、补码</h3><script type="math/tex; mode=display">正数：[x]_{原} = [x]_{反} = [x]_{补}</script><script type="math/tex; mode=display">负数：[x]_{原} = [x]_{反}{符号位不变，数值位取反} =【 {[x]_{补} = [x]_{反码}+1}】</script><h4 id="1-原码"><a href="#1-原码" class="headerlink" title="1. 原码"></a>1. 原码</h4><p>原码的符合位用0表示正数，用1表示负数。数值一般使用二进制形式表示</p><p>例如：</p><script type="math/tex; mode=display">X1 =  + 1001010</script><script type="math/tex; mode=display">X2 =-1001010</script><p>它们的的原码分别是为</p><p>X1 = 01001010</p><p>X2 = 11001010</p><p><img src="/img/cpimg/原反补.png" alt=""></p><h4 id="2-反码"><a href="#2-反码" class="headerlink" title="2. 反码"></a>2. 反码</h4><p>反码表示规划：正数的反码与原码相同，负数的反码是该数的原码，除了符号位以外得到其余各位求反</p><h4 id="3-补码"><a href="#3-补码" class="headerlink" title="3. 补码"></a>3. 补码</h4><p>补码表示的规则：正数的补码与原码相同，负数的补码是补码是先将该数的原阿门出符号位外其余各位求反，末尾加上1，计算中通常由符号数的存储时以补码的形式进行存储</p><p>反码的计算方式：<br>+1<br>00000001<br>-1<br>10000001<br>+127<br>01111111<br>-127<br>11111111<br>-128<br>10000000<br>0<br>00000000</p><p><img src="/img/cpimg/反码计算机中的存储方式.png" alt=""></p><p>N位无符号整数取值帆范围：0~2^n-1<br>n位有符号整数补码取值范围：-2^(N-1) ~ 2^(N-1)</p><p><img src="/img/cpimg/有符号和无符号.png" alt=""></p><p>例题：</p><p><img src="/img/cpimg/原码例题.png" alt=""></p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><img src="/img/cpimg/原码小结.png" alt=""></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2024/06/17/englishh-grammer-1-%E5%88%9D%E7%BA%A7%E8%AF%AD%E6%B3%95%E6%88%90%E4%BB%BD/"/>
-      <url>/2024/06/17/englishh-grammer-1-%E5%88%9D%E7%BA%A7%E8%AF%AD%E6%B3%95%E6%88%90%E4%BB%BD/</url>
-      
-        <content type="html"><![CDATA[<h1 id="English-grammar"><a href="#English-grammar" class="headerlink" title="English grammar"></a>English grammar</h1><h2 id="sentence-component"><a href="#sentence-component" class="headerlink" title="sentence component"></a>sentence component</h2><font color="#a4f">sencentce =  subject(noun) + predicate (verb </font><h3 id="一、noun"><a href="#一、noun" class="headerlink" title="一、noun"></a>一、noun</h3><h4 id="1-noun-phrase"><a href="#1-noun-phrase" class="headerlink" title="1. noun phrase"></a>1. noun phrase</h4><p>ej. a good boy</p><p>determiner  + modifier + subject item</p><h5 id="determiner-component"><a href="#determiner-component" class="headerlink" title="determiner component"></a>determiner component</h5><ul><li><ol><li>article</li><li>adjective</li><li>demonstrative pronoun</li><li>indefinite pronoun</li><li>cardinal numeral</li><li>questionable pronoun</li><li>nominative case</li></ol></li></ul><div class="table-container"><table><thead><tr><th>determiner</th><th>modifier</th><th>subject item</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table></div><h4 id="2-countable-noun-and-uncountable-noun"><a href="#2-countable-noun-and-uncountable-noun" class="headerlink" title="2. countable noun  and uncountable noun"></a>2. countable noun  and uncountable noun</h4><p>countable noun </p><ul><li>singular</li><li>complex number<ul><li>regular</li><li>irregular</li></ul></li></ul><p>uncountable noun</p><ul><li>uncountable </li><li><p>quantifiable</p></li><li><p>denumerable</p></li></ul><h3 id="二、pronoun"><a href="#二、pronoun" class="headerlink" title="二、pronoun"></a>二、pronoun</h3><h4 id="1-pronoun-of-the-person"><a href="#1-pronoun-of-the-person" class="headerlink" title="1. pronoun of the person"></a>1. pronoun of the person</h4><div class="table-container"><table><thead><tr><th>主格</th><th>宾格</th><th>形物代</th><th>名物代</th><th>反身代</th></tr></thead><tbody><tr><td>I</td><td>me</td><td>my</td><td>mine</td><td>myself</td></tr><tr><td>you</td><td>you</td><td>your</td><td>yours</td><td>yourself</td></tr><tr><td>He</td><td>him</td><td>his</td><td>his</td><td>himself</td></tr><tr><td>she</td><td>her</td><td>her</td><td>hers</td><td>herself</td></tr><tr><td>It</td><td>it</td><td>its</td><td>its</td><td>itself</td></tr><tr><td>we</td><td>us</td><td>our</td><td>ours</td><td>ourselves</td></tr><tr><td>you</td><td>you</td><td>your</td><td>yours</td><td>yourselves</td></tr><tr><td>they</td><td>them</td><td>their</td><td>theirs</td><td>themselves</td></tr></tbody></table></div><h4 id="2-demonstrative-pronoun"><a href="#2-demonstrative-pronoun" class="headerlink" title="2. demonstrative pronoun"></a>2. demonstrative pronoun</h4><p>this、 those、that、there</p><ul><li>this is a book</li><li>those are book</li><li>that is a book</li><li>those are book</li></ul><p>that ++++ countable noun uncountable</p><p>those +++ countable complex noun </p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/2024/06/14/englishh-word-%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D2/"/>
       <url>/2024/06/14/englishh-word-%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D2/</url>
       
@@ -268,6 +229,93 @@
             <tag> 专插本 </tag>
             
             <tag> c语言程序设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>4. 常量与变量</title>
+      <link href="/2024/06/07/cprograme-4-%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/"/>
+      <url>/2024/06/07/cprograme-4-%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="C语言插本自学篇"><a href="#C语言插本自学篇" class="headerlink" title="C语言插本自学篇"></a>C语言插本自学篇</h1><p>&gt;</p><blockquote><p>🚀<a href="../插本c语言知识点.md">1. C 语言知识基础知识</a>🚀</p><p>🚀<a href="../计算机的存储.md">2. 计算机的存储结构</a>🚀</p><p>🚀<a href="./3.C语言的数据类型.md">2. 计算机的存储结构</a>🚀</p></blockquote><h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><h2 id="一-常量"><a href="#一-常量" class="headerlink" title="一 常量"></a>一 常量</h2><p>（1）常量的定义</p><p><font color="red">常量是在程序运算过程中不变的量</font><br>常量在程序中经常直接出现：123、3.1415926，’a’, ‘computer’<br>它们符合相应类型的表示方法<br>相应的各种数据类型：如：整型常量，浮点型常量，字符型常量，字符串型常量</p><h3 id="1-整型常量（整常量）"><a href="#1-整型常量（整常量）" class="headerlink" title="1. 整型常量（整常量）"></a>1. 整型常量（整常量）</h3><p>（1）十进制整数：有数字0~9和正负号表示，如：124、-12、0<br>（2）八进制整数：有数字0开头，后跟着数字0~7表示，如0123、011<br>（3）十六进制整数：有0x开头，后跟着0~9、a~f、A~F表示，如0x123、0xff<br>根据 其值在范围内确定其数据类型。在整型常量后加字母l或L，认为它是long，<br>int 型常量<br>例如：<br>0123=（83）10<br>0x123=（291）10<br>0xff=（255）10</p><h3 id="2-实型常量（实数或浮点数）"><a href="#2-实型常量（实数或浮点数）" class="headerlink" title="2. 实型常量（实数或浮点数）"></a>2. 实型常量（实数或浮点数）</h3><p>（1）十进制数形式<br>（2）指数形式：（e前后都有数，e后是整数），如12.3e3<br>例如：123E2(√)，1.23e5(√)，e3(×).1.2E-2.5(×)<br>实行常量的类型默认是double型，如何实型常量后加f/f则表示float型<br>注意：实行常量智能用十进制表示，不能使用八进制或 十六进制表示<br>合法的实型常量：29.56，34.123，2.3e+8<br>不合法的实行常量：5.4E+3.8，e5，e-1</p><h3 id="3-字符常量"><a href="#3-字符常量" class="headerlink" title="3.字符常量"></a>3.字符常量</h3><p>定义：用单引号括起来的单个普通字符或转义字符<br>字符常量的值：该赐福的ascII码值<br>转义字符：反斜杠后跟着一个字符或一个代码值<br><img src="/img/cpimg/常见的ascii码值.png" alt=""></p><p>转义字符及其含义：<br><img src="/img/cpimg/转义字符表.png" alt=""></p><h3 id="4-字符串常量"><a href="#4-字符串常量" class="headerlink" title="4.字符串常量"></a>4.字符串常量</h3><p>字符串常量的特点是有一对双引号定界，双引号是定界符，<br>不属于常量的内容，双引号必须为英文且不分左右；<br>并由0或诺干字符组成，字符串可以包含空格，如“abedefgh””10+20”、””等，<br>字符串还可包含转义字符<br>与两个单引号内必须由一个一个字符不同，两个双引号内可以没有内容，两个连续的双引号表示0个字符串，称为空串<br>关于存储：每个字符床尾自动加一个\0作为字符串结束的标志</p><script type="math/tex; mode=display">    sieof(存储的大小) = 字符个数+1('\0')    strlen(存储长度) = 字符个数('不含\0')</script><p>例题<br><img src="/img/cpimg/常量例题1.png" alt=""></p><h3 id="5-符号定义"><a href="#5-符号定义" class="headerlink" title="5. 符号定义"></a>5. 符号定义</h3><p>（1）符号常量<br>用#define宏定义，指定用一个符号名称代表一个常量<br>如：#define PI 3.14 // 没有分号</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 专插本 </category>
+          
+          <category> c语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 专插本 </tag>
+            
+            <tag> c语言程序设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>3. C语言的数据类型</title>
+      <link href="/2024/06/07/cprograme-3-c%E8%AF%AD%E8%A8%80%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2024/06/07/cprograme-3-c%E8%AF%AD%E8%A8%80%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<blockquote><h1 id="C语言插本自学篇"><a href="#C语言插本自学篇" class="headerlink" title="C语言插本自学篇"></a>C语言插本自学篇</h1><p>🚀<a href="../插本c语言知识点.md">1. C 语言知识基础知识</a>🚀</p><p>🚀<a href="../计算机的存储.md">2. 计算机的存储结构</a>🚀</p><p>🚀<a href="./3.C语言的数据类型.md">2. 计算机的存储结构</a>🚀</p></blockquote><h1 id="C语言的数据类型"><a href="#C语言的数据类型" class="headerlink" title="C语言的数据类型"></a>C语言的数据类型</h1><h2 id="一、数据类型"><a href="#一、数据类型" class="headerlink" title="一、数据类型"></a>一、数据类型</h2><p><img src="/img/cpimg/数据类型.png" alt=""></p><h3 id="（1）基本数据类型"><a href="#（1）基本数据类型" class="headerlink" title="（1）基本数据类型"></a>（1）基本数据类型</h3><font color="block">基本数据类</font>：基本数据类型最主要的特点是其值不可以再分解为其他类型包括<font color="block">整型（int）、实型-浮点型（单精度（float）、双精度（double）、字符型（char）</font><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a；</span><br><span class="line"><span class="type">float</span> a；</span><br></pre></td></tr></table></figure><h3 id="（二）构造数据类型"><a href="#（二）构造数据类型" class="headerlink" title="（二）构造数据类型"></a>（二）构造数据类型</h3><font color="bloack">构造数据类型</font>：构造数据类型是根据已定义的一个或多个数据类型用构造的方法来定义的，也就是说，一个构造类型的值可以分解成诺干个“成员”或“元素”。每个“成员”都是一个基本数据类型 或 又是一个构造类型。包括<font color="bloack">数组类型（[]）、结构体类型（struct）、公用体类型（union）</font><h3 id="三-指针类型（-）"><a href="#三-指针类型（-）" class="headerlink" title="(三) 指针类型（*）"></a>(三) 指针类型（*）</h3><p><font color="block">指针类型（*）</font>：指针是一种特殊的，同时又具有重要作用的 数据类型。其值用来表示某报个变量再内存储器中的地址，虽然指针变量的取值乐视于整型量，但是两种类型完全不相同的量</p><h3 id="四-空类型-（void）"><a href="#四-空类型-（void）" class="headerlink" title="(四) 空类型 （void）"></a>(四) 空类型 （void）</h3><p>空类型：在盗用函数值是，通常应向调用者后返回一个函数值，这个函数值是据一定的数据类型，应在函数定义以及函数说明中加以说明，如果 int max (int a,int b) ;其中 int 类型 说明符比爱哦是改函数的返回值 为整型量，但是也有以内函数，调用后不需要向调用者返回函数值，这种函数可以定义为“空类型”</p><h2 id="二、常用的基本数据类型"><a href="#二、常用的基本数据类型" class="headerlink" title="二、常用的基本数据类型"></a>二、常用的基本数据类型</h2><p> <img src="/img/cpimg/数据类型表.png" alt=""></p><p>计算机内部，数据是以二进制的形式存储和运算的，计算机类表示的数分成整数和实数两大类。数的正负用最好字节的最高位来表示，定义为符号位，用“0”比爱哦是正数，“1”表示负数。</p><p>列入，二进制数+1101000 在及其类的 表示为：</p><p><img src="/img/cpimg/c语言中的二进制.png" alt=""></p><h3 id="数"><a href="#数" class="headerlink" title="数"></a>数</h3><ol><li>有符号数：符号位（最高位） + 数值位 （需要补码）<ol><li>0 为正数</li><li>1为负数</li><li>00000001  +1</li><li>10000001  -1</li></ol></li><li>无符号数：数值位<ol><li>全为数值位</li><li>00000001  +1</li><li>10000001  +129</li></ol></li></ol><h3 id="原码、反码、补码"><a href="#原码、反码、补码" class="headerlink" title="原码、反码、补码"></a>原码、反码、补码</h3><script type="math/tex; mode=display">正数：[x]_{原} = [x]_{反} = [x]_{补}</script><script type="math/tex; mode=display">负数：[x]_{原} = [x]_{反}{符号位不变，数值位取反} =【 {[x]_{补} = [x]_{反码}+1}】</script><h4 id="1-原码"><a href="#1-原码" class="headerlink" title="1. 原码"></a>1. 原码</h4><p>原码的符合位用0表示正数，用1表示负数。数值一般使用二进制形式表示</p><p>例如：</p><script type="math/tex; mode=display">X1 =  + 1001010</script><script type="math/tex; mode=display">X2 =-1001010</script><p>它们的的原码分别是为</p><p>X1 = 01001010</p><p>X2 = 11001010</p><p><img src="/img/cpimg/原反补.png" alt=""></p><h4 id="2-反码"><a href="#2-反码" class="headerlink" title="2. 反码"></a>2. 反码</h4><p>反码表示规划：正数的反码与原码相同，负数的反码是该数的原码，除了符号位以外得到其余各位求反</p><h4 id="3-补码"><a href="#3-补码" class="headerlink" title="3. 补码"></a>3. 补码</h4><p>补码表示的规则：正数的补码与原码相同，负数的补码是补码是先将该数的原阿门出符号位外其余各位求反，末尾加上1，计算中通常由符号数的存储时以补码的形式进行存储</p><p>反码的计算方式：<br>+1<br>00000001<br>-1<br>10000001<br>+127<br>01111111<br>-127<br>11111111<br>-128<br>10000000<br>0<br>00000000</p><p><img src="/img/cpimg/反码计算机中的存储方式.png" alt=""></p><p>N位无符号整数取值帆范围：0~2^n-1<br>n位有符号整数补码取值范围：-2^(N-1) ~ 2^(N-1)</p><p><img src="/img/cpimg/有符号和无符号.png" alt=""></p><p>例题：</p><p><img src="/img/cpimg/原码例题.png" alt=""></p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><img src="/img/cpimg/原码小结.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 专插本 </category>
+          
+          <category> c语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 专插本 </tag>
+            
+            <tag> c语言程序设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>英语语法（English grammar）</title>
+      <link href="/2024/06/07/englishh-grammer-1-%E5%88%9D%E7%BA%A7%E8%AF%AD%E6%B3%95%E6%88%90%E4%BB%BD/"/>
+      <url>/2024/06/07/englishh-grammer-1-%E5%88%9D%E7%BA%A7%E8%AF%AD%E6%B3%95%E6%88%90%E4%BB%BD/</url>
+      
+        <content type="html"><![CDATA[<h1 id="English-grammar"><a href="#English-grammar" class="headerlink" title="English grammar"></a>English grammar</h1><h2 id="sentence-component"><a href="#sentence-component" class="headerlink" title="sentence component"></a>sentence component</h2><font color="#a4f">sencentce =  subject(noun) + predicate (verb </font><h3 id="一、noun"><a href="#一、noun" class="headerlink" title="一、noun"></a>一、noun</h3><h4 id="1-noun-phrase"><a href="#1-noun-phrase" class="headerlink" title="1. noun phrase"></a>1. noun phrase</h4><p>ej. a good boy</p><p>determiner  + modifier + subject item</p><h5 id="determiner-component"><a href="#determiner-component" class="headerlink" title="determiner component"></a>determiner component</h5><ul><li><ol><li>article</li><li>adjective</li><li>demonstrative pronoun</li><li>indefinite pronoun</li><li>cardinal numeral</li><li>questionable pronoun</li><li>nominative case</li></ol></li></ul><div class="table-container"><table><thead><tr><th>determiner</th><th>modifier</th><th>subject item</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table></div><h4 id="2-countable-noun-and-uncountable-noun"><a href="#2-countable-noun-and-uncountable-noun" class="headerlink" title="2. countable noun  and uncountable noun"></a>2. countable noun  and uncountable noun</h4><p>countable noun </p><ul><li>singular</li><li>complex number<ul><li>regular</li><li>irregular</li></ul></li></ul><p>uncountable noun</p><ul><li>uncountable </li><li><p>quantifiable</p></li><li><p>denumerable</p></li></ul><h3 id="二、pronoun"><a href="#二、pronoun" class="headerlink" title="二、pronoun"></a>二、pronoun</h3><h4 id="1-pronoun-of-the-person"><a href="#1-pronoun-of-the-person" class="headerlink" title="1. pronoun of the person"></a>1. pronoun of the person</h4><div class="table-container"><table><thead><tr><th>主格</th><th>宾格</th><th>形物代</th><th>名物代</th><th>反身代</th></tr></thead><tbody><tr><td>I</td><td>me</td><td>my</td><td>mine</td><td>myself</td></tr><tr><td>you</td><td>you</td><td>your</td><td>yours</td><td>yourself</td></tr><tr><td>He</td><td>him</td><td>his</td><td>his</td><td>himself</td></tr><tr><td>she</td><td>her</td><td>her</td><td>hers</td><td>herself</td></tr><tr><td>It</td><td>it</td><td>its</td><td>its</td><td>itself</td></tr><tr><td>we</td><td>us</td><td>our</td><td>ours</td><td>ourselves</td></tr><tr><td>you</td><td>you</td><td>your</td><td>yours</td><td>yourselves</td></tr><tr><td>they</td><td>them</td><td>their</td><td>theirs</td><td>themselves</td></tr></tbody></table></div><h4 id="2-demonstrative-pronoun"><a href="#2-demonstrative-pronoun" class="headerlink" title="2. demonstrative pronoun"></a>2. demonstrative pronoun</h4><p>this、 those、that、there</p><ul><li>this is a book</li><li>those are book</li><li>that is a book</li><li>those are book</li></ul><p>that ++++ countable noun uncountable</p><p>those +++ countable complex noun </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 专插本 </category>
+          
+          <category> 英语 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 专插本 </tag>
+            
+            <tag> 英语知识 </tag>
             
         </tags>
       
