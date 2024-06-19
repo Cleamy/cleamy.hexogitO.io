@@ -50,20 +50,3 @@ if (window.localStorage.getItem("fpson") == undefined || window.localStorage.get
     document.getElementById("fps").style = "display:none!important"
 }
 
-
-
-()=>{
-    name: "";
-    page: "";
-    let cat = ()=>{
-        cate.date()
-        ca = "os system lete"
-    }
-    try{
-
-    }catch(e){
-
-    }finally{
-
-    }
-}
