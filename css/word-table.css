@@ -1,0 +1,68 @@
+/* 单词表基础样式 */
+.word-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.word-table th,
+.word-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f0b2b2;
+}
+
+.word-table th {
+  background-color: #f3a8a8;
+  font-weight: 600;
+  color: #333;
+}
+
+.word-table tr:hover {
+  background-color: #e9a6a6;
+}
+
+/* 点击英文显示中文 */
+.word-table td:nth-child(2) {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* 测试按钮样式 */
+.word-table td:last-child {
+  color: #4285f4;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.word-table td:last-child:hover {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+/* 暗黑模式适配 */
+@media (prefers-color-scheme: dark) {
+  .word-table {
+    box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+  }
+  .word-table th {
+    background-color: #2d3748;
+    color: #b46c6c;
+  }
+  .word-table tr:hover {
+    background-color: #2c3e50;
+  }
+  .word-table td:nth-child(2) {
+    color: #cf8787;
+  }
+  .word-table td:last-child {
+    color: #6ea6ff;
+  }
+  .word-table td:last-child:hover {
+    color: #9fc1ff;
+  }
+}
