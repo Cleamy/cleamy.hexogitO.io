@@ -1,9 +1,21 @@
 // source/js/word-test.js
 document.addEventListener('DOMContentLoaded', function () {
-    const pageTitle = document.querySelector('.post-title');
-    if (!pageTitle || !['英语单词每日学习', '英语单词'].includes(pageTitle.textContent.trim())) {
+    // 仅在指定页面运行
+    const pageTitle = document.querySelector('.post-meta__tag-list');
+    const pageCategory = document.querySelector('.post-meta-categories');
+    console.log(pageTitle.textContent.trim())
+    console.log(pageCategory.textContent.trim())
+    console.log((!pageTitle || !(pageTitle.textContent.trim().includes(['英语单词'])) || !pageCategory || !(pageCategory.textContent.trim().includes(['英语单词']))))
+        console.log("测试链接2：："+(false||false||false||!(true)))
+        console.log(!pageTitle)
+        console.log(!pageCategory)
+        console.log(!(pageTitle.textContent.trim().includes(['英语单词'])))
+        console.log(!pageCategory.textContent.trim().includes(['英语单词']))
+    if (!(!pageTitle || !(pageTitle.textContent.trim().includes(['英语单词'])) ||
+        !pageCategory || !(pageCategory.textContent.trim().includes(['英语单词'])))) {
         return;
     }
+    
 
     const tables = document.querySelectorAll('.post-content table');
     tables.forEach(table => {

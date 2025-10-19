@@ -1,9 +1,13 @@
 // 点击英文 → 显示/隐藏中文
 document.addEventListener('DOMContentLoaded', function () {
-    const pageTitle = document.querySelector('.post-title');
-    if (!pageTitle || !['英语单词每日学习', '英语单词'].includes(pageTitle.textContent.trim())) {
+    // 仅在指定页面运行
+    const pageTitle = document.querySelector('.post-meta__tag-list');
+    const pageCategory = document.querySelector('.post-meta-categories');
+    if (!(!pageTitle || !(pageTitle.textContent.trim().includes(['英语单词'])) ||
+        !pageCategory || !(pageCategory.textContent.trim().includes(['英语单词'])))) {
         return;
-    }
+    }s
+    
 
     const tables = document.querySelectorAll('.post-content table');
     tables.forEach(table => {

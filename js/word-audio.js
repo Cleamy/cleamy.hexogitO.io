@@ -1,10 +1,15 @@
 // word-audio.js - 英语单词听读弹窗（完全独立，无需 import，兼容所有 Hexo 主题）
 document.addEventListener('DOMContentLoaded', function () {
+    
+    
     // 仅在指定页面运行
-    const pageTitle = document.querySelector('.post-title');
-    if (!pageTitle || !['英语单词每日学习'].includes(pageTitle.textContent.trim())) {
+    const pageTitle = document.querySelector('.post-meta__tag-list');
+    const pageCategory = document.querySelector('.post-meta-categories');
+    if (!(!pageTitle || !(pageTitle.textContent.trim().includes(['英语单词'])) ||
+        !pageCategory || !(pageCategory.textContent.trim().includes(['英语单词'])))) {
         return;
     }
+    
 
     // 找到所有表格并添加“听读”按钮
     const tables = document.querySelectorAll('table');
