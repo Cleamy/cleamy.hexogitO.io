@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.yeahxi.cn/2025/10/19/englishh-word-%E5%85%AD%E7%BA%A7%E5%8D%95%E8%AF%8Dday-1-%E5%A4%A7%E7%BA%B2%E6%96%B0%E8%AF%8D%E6%B1%87-27/</loc>
+    
+    <lastmod>2025-10-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.yeahxi.cn/2025/10/19/englishh-word-%E5%85%AD%E7%BA%A7%E5%8D%95%E8%AF%8Dday1%E8%AE%A4%E8%AF%86%E8%AF%8D%E6%B1%87/</loc>
+    
+    <lastmod>2025-10-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.yeahxi.cn/2025/10/19/englishh-word-%E5%85%AD%E7%BA%A7%E5%8D%95%E8%AF%8D1/</loc>
     
     <lastmod>2025-10-19</lastmod>
@@ -395,13 +413,6 @@
   </url>
   
   <url>
-    <loc>https://blog.yeahxi.cn/tags/springAOP/</loc>
-    <lastmod>2025-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.yeahxi.cn/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -410,6 +421,13 @@
   
   <url>
     <loc>https://blog.yeahxi.cn/tags/%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.yeahxi.cn/tags/springAOP/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -523,14 +541,14 @@
   </url>
   
   <url>
-    <loc>https://blog.yeahxi.cn/categories/%E4%B8%93%E6%8F%92%E6%9C%AC/%E8%8B%B1%E8%AF%AD/</loc>
+    <loc>https://blog.yeahxi.cn/categories/java/proxy/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.yeahxi.cn/categories/java/proxy/</loc>
+    <loc>https://blog.yeahxi.cn/categories/%E4%B8%93%E6%8F%92%E6%9C%AC/%E8%8B%B1%E8%AF%AD/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -544,7 +562,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yeahxi.cn/categories/java/AOP/</loc>
+    <loc>https://blog.yeahxi.cn/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -565,7 +583,7 @@
   </url>
   
   <url>
-    <loc>https://blog.yeahxi.cn/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</loc>
+    <loc>https://blog.yeahxi.cn/categories/java/AOP/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
