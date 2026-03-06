@@ -1,0 +1,20 @@
+.word-test-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+    background-color: #1976D2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    text-align: center;
+}
+
+.word-test-btn:hover {
+    background-color: #1565C0;
+}
+
+.word-test-btn:active {
+    transform: scale(0.98);
+}
