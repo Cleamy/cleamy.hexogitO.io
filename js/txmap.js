@@ -36,6 +36,8 @@ function showWelcome() {
     // print(ipLoacation.result.ad_info.nation)
     // print(ipLoacation.result.ad_info.province)
     //根据国家、省份、城市信息自定义欢迎语
+    console.log("ipaddress: ",ipLoacation.result.ad_info.nation)
+    alert("ipaddress: ",ipLoacation.result.ad_info.nation)
     switch (ipLoacation.result.ad_info.nation) {
         case "日本":
             posdesc = "よろしく，一起去看樱花吗";
@@ -226,4 +228,4 @@ function showWelcome() {
 }
 window.onload = showWelcome;
 // 如果使用了pjax在加上下面这行代码
-document.addEventListener('pjax:complete', showWelcome);
+// document.addEventListener('pjax:complete', showWelcome);
