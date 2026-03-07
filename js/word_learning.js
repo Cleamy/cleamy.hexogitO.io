@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!(!pageTitle || !(pageTitle.textContent.trim().includes(['英语单词'])) ||
         !pageCategory || !(pageCategory.textContent.trim().includes(['英语单词'])))) {
         return;
-    }s
+    }
     
 
     const tables = document.querySelectorAll('.post-content table');
